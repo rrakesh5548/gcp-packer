@@ -14,5 +14,11 @@ pipeline {
                 sh 'packer inspect packer.json'
             }
     }
+        stage('packer build') {
+           steps {
+               
+                sh 'packer build packer.json'
+            }
+    }
 }
 }
