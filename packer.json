@@ -1,0 +1,24 @@
+{
+	"builders": [
+		{
+	"type":"googlecompute",
+	"account_file":"terraform.json",
+	"project_id": "migcpproject",
+	"source_image":"debian-9-stretch-v20201216",
+	"ssh_username":"packer",
+	"image_name":"a3-packer",
+	"disk_size":"10",
+	"zone":"us-central1-a"
+		}
+	],
+	"provisioners":[
+			{
+				"type": "shell",
+				"inline": [
+					"sudo apt-get update",
+					"sudo apt-get install apache2 -y"
+				]
+
+			}
+			]
+		}
