@@ -6,7 +6,7 @@
 	"project_id": "nasa7733-lab",
 	"source_image":"debian-9-stretch-v20201216",
 	"ssh_username":"packer",
-	"image_name":"gitimage",
+	"image_name":"cg01",
 	"disk_size":"10",
 	"zone":"us-central1-a"
 		}
@@ -17,7 +17,8 @@
 				"inline": [
 					"sudo apt-get update",
 					"sudo apt-get install apache2 -y",
-					"sudo apt-get install git -y"
+					"sudo apt-get install git -y",					
+					"sudo apt-get install stress -y"
 				]
 
 			}
