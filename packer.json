@@ -5,7 +5,7 @@
 	"project_id": "labsession-548",
 	"source_image":"debian-9-stretch-v20200309",
 	"ssh_username":"packer",
-	"image_name":"packer-image-stack-driver",
+	"image_name":"packer-image1",
 	"disk_size":"10",
 	"zone":"us-central1-a"
 		}
@@ -16,8 +16,7 @@
 				"inline": [
 					"sudo apt-get update",
 					"sudo apt-get install apache2 -y",
-                    			"sudo apt-get install git"
-				
+                    "sudo apt-get install git"
 			]
 
 		}
