@@ -1,26 +1,28 @@
 {
-	"builders": [
-		{
+	"builders": [ {
 	"type":"googlecompute",
 	"account_file":"terraform.json",
 	"project_id": "labsession-548",
-	"source_image":"debian-9-stretch-v20201216",
-	"ssh_username":"packer",
-	"image_name":"packerimage",
+	"source_image":"debian-9-stretch-v20200309",
+	"ssh_username":"packer-stack-driver",
+	"image_name":"packer-image-stack-driver",
 	"disk_size":"10",
 	"zone":"us-central1-a"
 		}
 	],
-	"provisioners":[
+    "provisioners":[
 			{
 				"type": "shell",
 				"inline": [
 					"sudo apt-get update",
 					"sudo apt-get install apache2 -y",
-					"sudo apt-get install git -y",					
-					"sudo apt-get install stress -y"
-				]
-
-			}
+                    			"sudo apt-get install git",
+					"curl -sSO https://dl.google.com/cloudagents/add-monitoring-agent-repo.sh",
+					"sudo bash add-monitoring-agent-repo.sh --also-install",
+					"sudo service stackdriver-agent start",
+					"sudo service stackdriver-agent status"
 			]
+
 		}
+	]
+}
