@@ -3,10 +3,10 @@
 		{
 	"type":"googlecompute",
 	"account_file":"terraform.json",
-	"project_id": "nasa7733-lab",
+	"project_id": "labsession-548",
 	"source_image":"debian-9-stretch-v20201216",
 	"ssh_username":"packer",
-	"image_name":"cg02",
+	"image_name":"packerimage",
 	"disk_size":"10",
 	"zone":"us-central1-a"
 		}
