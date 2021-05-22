@@ -4,7 +4,7 @@
 	"account_file":"terraform.json",
 	"project_id": "labsession-548",
 	"source_image":"debian-9-stretch-v20200309",
-	"ssh_username":"packer-stack-driver",
+	"ssh_username":"packer",
 	"image_name":"packer-image-stack-driver",
 	"disk_size":"10",
 	"zone":"us-central1-a"
