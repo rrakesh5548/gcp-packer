@@ -6,7 +6,7 @@
 	"project_id": "labsession-548",
 	"source_image":"debian-9-stretch-v20201216",
 	"ssh_username":"packer",
-	"image_name":"cg03",
+	"image_name":"stackimage",
 	"disk_size":"10",
 	"zone":"us-central1-a"
 		}
