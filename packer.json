@@ -39,7 +39,9 @@
 					"sleep 20",
 					"sudo apt-get install google-fluentd-catch-all-config-structured",
 					"sleep 20",
-					"sudo service google-fluentd start"
+					"sudo service google-fluentd start",
+					"sleep 20",
+					"sudo apt-get install stress"
 				]
 
 			}
